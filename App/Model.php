@@ -13,8 +13,5 @@ abstract class Model
             'SELECT * FROM ' . static::TABLE, 
             static::class
         );
-    }
-    
-    abstract public function getName();
-    
+    }    
 }
