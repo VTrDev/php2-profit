@@ -11,9 +11,5 @@ function sum(int $a, int $b)
 
 echo sum(1.2, 2.3);
 
-$s = App\Singleton::instance();
-$s->counter = 1;
-var_dump($s);
-
-$s = App\Singleton::instance();
-var_dump($s);
+//$s = App\Singleton::instance();
+//var_dump($s);
