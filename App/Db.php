@@ -13,10 +13,10 @@ class Db
         $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=php2_profit', 'root', '');
     }
     
-    public function execute($sql)
+    public function execute($sql, $params = [])
     {
         $sth = $this->dbh->prepare($sql);
-        $res = $sth->execute();
+        $res = $sth->execute($params);
         return $res;
     }
     
