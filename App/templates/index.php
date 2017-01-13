@@ -20,18 +20,18 @@
   <body>
     <h1>Hello, world!</h1>
     
-    <?php foreach ($users as $user) { ?>
+    <?php foreach ($users as $user) : ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <?php if (!empty($user->name)) { ?>
+            <?php if (!empty($user->name)) : ?>
             <?php echo $user->name; ?>
-            <?php } else { ?>
+            <?php  else : ?>
             -= Без имени =-
-            <?php } ?>
+            <?php endif; ?>
         </div>
         <div class="panel-body"><?php echo $user->email; ?></div>
     </div>
-    <?php } ?>
+    <?php endforeach; ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
