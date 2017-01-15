@@ -25,3 +25,9 @@ function second() {
 
 var_dump(first() && second()); // First bool(false)
 var_dump(second() || first()); // Second bool(true)
+
+$a = true xor true; 
+var_dump($a); // true из-за более высокого приоритета = (по историческим причинам)
+
+$a = (true xor true); 
+var_dump($a); // false как и должно быть 
