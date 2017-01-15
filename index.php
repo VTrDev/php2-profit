@@ -3,4 +3,4 @@
 require __DIR__ . '/autoload.php';
 
 $controller = new App\Controllers\News();
-$controller->actionIndex();
+$controller->action('Index');
