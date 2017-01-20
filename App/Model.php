@@ -3,7 +3,7 @@
 namespace App;
 
 abstract class Model 
-{
+{    
     const TABLE = '';
     
     public $id;
