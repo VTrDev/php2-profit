@@ -10,7 +10,12 @@ class Db
 
     protected function __construct() 
     {
-        $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=php2_profit', 'root', '');
+        try {
+            $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=php2_profit', 'root', '');
+        } catch (\PDOException $e) {
+            throw new \App\Exceptions\Db($e->getMessage()); // преобразуем исключение PDO в исключение своего класса
+            die;
+        }        
     }
     
     public function execute($sql, $params = [])

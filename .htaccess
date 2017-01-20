@@ -1,5 +1,5 @@
 # включить модуль mod_rewrite
-RewriteEngine On
+#RewriteEngine On
 
 # любой адрес перенаправлять на index.php
 RewriteRule ^.*$ index.php [L]
